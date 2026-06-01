@@ -1,0 +1,223 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+
+    padding:20px;
+}
+
+.container{
+
+    width:100%;
+    max-width:700px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+    color:#333;
+}
+
+.subtitle{
+    text-align:center;
+    margin-top:10px;
+    color:gray;
+}
+
+.input-section{
+
+    display:flex;
+    gap:10px;
+
+    margin-top:25px;
+}
+
+input{
+
+    flex:1;
+
+    padding:14px;
+
+    border:2px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:16px;
+}
+
+input:focus{
+    outline:none;
+    border-color:#667eea;
+}
+
+#addBtn{
+
+    padding:14px 25px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#667eea;
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+#addBtn:hover{
+    transform:translateY(-2px);
+}
+
+#progressText{
+
+    text-align:center;
+
+    margin:25px 0;
+
+    color:#667eea;
+}
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+
+    margin-bottom:25px;
+}
+
+.stat-box{
+
+    text-align:center;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    background:#f4f4f4;
+}
+
+.stat-box h3{
+    color:#667eea;
+    font-size:28px;
+}
+
+.stat-box p{
+    color:#555;
+}
+
+ul{
+    list-style:none;
+}
+
+li{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px;
+
+    margin-top:12px;
+
+    background:#f7f7f7;
+
+    border-radius:12px;
+
+    transition:0.3s;
+}
+
+li:hover{
+    transform:translateY(-2px);
+}
+
+.task-buttons{
+    display:flex;
+    gap:8px;
+}
+
+.done-btn{
+
+    background:#22c55e;
+
+    color:white;
+
+    border:none;
+
+    padding:8px 14px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+}
+
+.delete-btn{
+
+    background:#ef4444;
+
+    color:white;
+
+    border:none;
+
+    padding:8px 14px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+}
+
+.completed{
+
+    text-decoration:line-through;
+
+    color:gray;
+}
+
+@media(max-width:600px){
+
+    .input-section{
+        flex-direction:column;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    li{
+        flex-direction:column;
+        gap:10px;
+        align-items:flex-start;
+    }
+}
